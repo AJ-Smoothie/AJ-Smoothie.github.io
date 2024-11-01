@@ -14,7 +14,7 @@
         }
         /* Sidebar */
         .sidebar {
-            width: 40;
+            width: 100;
             background-color: #1d2a49;
             color: #fff;
             padding: 20px;
@@ -24,15 +24,6 @@
             border-right: 1px solid #444;
             box-shadow: 2px 0 5px rgba(0,0,0,0.2);
         }
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 1000px;       /* Narrower sidebar on mobile */
-                padding: 10px;
-            }
-            .main-content {
-                margin-left: 100px; /* Adjusts to narrower sidebar */
-                width: calc(100% - 100px);
-            }
         .sidebar h2 {
             font-size: 26px;
             color: #00bcd4; /* teal */
@@ -50,17 +41,26 @@
             border-radius: 4px;
             transition: background-color 0.3s, color 0.3s;
         }
+        /* Responsive Adjustments for Smaller Screens */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 120px;       /* Narrower sidebar on mobile */
+                padding: 10px;
+            }
+            .main-content {
+                margin-left: 100px; /* Adjusts to narrower sidebar */
+                width: calc(100% - 100px);
+            }
+        }
         .sidebar a:hover {
             background-color: #00bcd4; /* teal */
             color: #fff;
         }
         /* Main Content */
         .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centers recipe cards horizontally */
+            margin-left: 240px;
             padding: 30px;
-            margin-left: 100px;
+            width: calc(100% - 260px);
         }
         .recipe {
             border: 1px solid #ddd;
