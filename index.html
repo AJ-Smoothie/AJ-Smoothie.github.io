@@ -26,7 +26,7 @@
         }
         @media (max-width: 768px) {
             .sidebar {
-                width: 80px;       /* Narrower sidebar on mobile */
+                width: 1000px;       /* Narrower sidebar on mobile */
                 padding: 10px;
             }
             .main-content {
@@ -56,9 +56,11 @@
         }
         /* Main Content */
         .main-content {
-            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers recipe cards horizontally */
             padding: 30px;
-            width: calc(100% - 260px);
+            margin-left: 100px;
         }
         .recipe {
             border: 1px solid #ddd;
