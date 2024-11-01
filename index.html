@@ -44,12 +44,14 @@
         /* Responsive Adjustments for Smaller Screens */
         @media (max-width: 768px) {
             .sidebar {
-                width: 120px;       /* Narrower sidebar on mobile */
+                width: 120px; /* Width of the sidebar on mobile */
                 padding: 10px;
             }
             .main-content {
-                margin-left: 100px; /* Adjusts to narrower sidebar */
-                width: calc(100% - 100px);
+                margin-left: 0; /* Remove left margin to center the content */
+                width: 100%; /* Full width to make the cards larger on mobile */
+                padding-left: 10px; /* Add padding for better spacing */
+                padding-right: 10px;
             }
         }
         .sidebar a:hover {
