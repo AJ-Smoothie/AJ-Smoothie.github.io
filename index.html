@@ -14,7 +14,7 @@
         }
         /* Sidebar */
         .sidebar {
-            width: 220px;
+            width: 100;
             background-color: #333;
             color: #fff;
             padding: 20px;
@@ -74,11 +74,14 @@
             color: #666;
         }
         .recipe img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 15px;
+            width: 33%;          /* Image takes full width of container */
+            max-width: 200;     /* Constrains maximum width */
+            height: 150;        /* Sets a fixed height */
+            object-fit: cover;    /* Maintains aspect ratio */
+            margin: 10px auto;    /* Centers the image within the container */
             border-radius: 8px;
             border: 1px solid #ddd;
+            display: block;       /* Centers the image */
         }
     </style>
 </head>
