@@ -59,5 +59,7 @@ It contains:
 
 This keeps project dependencies isolated so different projects do not interfere with each other. The `.venv` folder is automatically created with `python -m venv .venv` and activated with `.venv\Scripts\activate`. Once activated, all Python commands and package installs apply only to this project.
 
+Beans!
+
 
 
