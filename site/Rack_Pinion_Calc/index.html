@@ -220,12 +220,12 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-martini" viewBox="0 0 24 24"><path d="M8 22h8M12 11v11M19 3l-7 8-7-8Z"/></svg>
   
   <span class="md-ellipsis">
     
   
-  Get started
+  Welcome!
 
     
   </span>
@@ -461,6 +461,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fusion Motion Link Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tooth-rotation-and-rack-tooth-pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tooth Rotation and Rack Tooth Pitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-parameter-formula-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fusion Parameter Formula List
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        References
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -498,12 +537,10 @@
         
   
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
-  
   <span class="md-ellipsis">
     
   
-  Markdown in 5min
+  Helpful tips
 
     
   </span>
@@ -714,6 +751,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Fusion Motion Link Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tooth-rotation-and-rack-tooth-pitch" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tooth Rotation and Rack Tooth Pitch
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-parameter-formula-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fusion Parameter Formula List
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        References
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -757,6 +833,10 @@
 
 <h1 id="rack-pinion-calculator">Rack &amp; Pinion Calculator<a class="headerlink" href="#rack-pinion-calculator" title="Permanent link">&para;</a></h1>
 <p>A clean, reusable way to convert rack travel into pinion tooth count.</p>
+<div class="admonition warning">
+<p class="admonition-title">Pay Attention</p>
+<p>All the calcuations here assume that we are using a <strong>module of 1.</strong> Sometimes you will see the module omitted from the practical applications of the equations because it's simply one.</p>
+</div>
 <h2 id="the-idea">The Idea<a class="headerlink" href="#the-idea" title="Permanent link">&para;</a></h2>
 <p>Calculating the distance a rack will move is actually a lot easier than you think <em>(haha just kidding :)</em>. We can think of the rack as a regular gear. After doing the calculations on it, we can "unroll" that gear, using the circumference of the gear as the rack length.</p>
 <h2 id="the-formulas">The Formulas<a class="headerlink" href="#the-formulas" title="Permanent link">&para;</a></h2>
@@ -813,8 +893,7 @@ R_L = T_C \cdot \pi \cdot m \cdot \frac{\theta}{360}
 <li>Travel of rack required: <span class="arithmatex">\(~20mm\)</span></li>
 <li>Module: <span class="arithmatex">\(1\)</span></li>
 <li>Pressure angle: <span class="arithmatex">\(20^\circ\)</span></li>
-<li>Backlash: <span class="arithmatex">\(0.15mm\)</span>
-+</li>
+<li>Backlash: <span class="arithmatex">\(0.15mm\)</span></li>
 </ul>
 <h3 id="working">Working<a class="headerlink" href="#working" title="Permanent link">&para;</a></h3>
 <p>20mm of travel is required for the rack. Therefore, we can use <strong>Formula 3</strong> to find the needed rack tooth count:</p>
@@ -916,6 +995,107 @@ R_L = 26 \cdot \pi \cdot \frac{100^\circ}{360^\circ} = 22.69mm
 <p>How much rack travel happens when the <strong>26-tooth pinion</strong> rotates by <span class="arithmatex">\(100^\circ\)</span>?</p>
 </blockquote>
 <p>In Fusion, set the motion link to approximately <strong>22.69mm of rack travel per 100 degrees of pinion rotation</strong>, not 21.99mm per 100 degrees.</p>
+<h4 id="tooth-rotation-and-rack-tooth-pitch">Tooth Rotation and Rack Tooth Pitch<a class="headerlink" href="#tooth-rotation-and-rack-tooth-pitch" title="Permanent link">&para;</a></h4>
+<p>For Fusion parameters, tooth indexing comes from splitting one full pinion rotation by the number of teeth on the pinion. One complete tooth-to-tooth step is one tooth pitch around the pinion, so the angular step is:</p>
+<div class="arithmatex">\[
+\theta_{1tooth} = \frac{360^\circ}{T_{C(pinion)}}
+\]</div>
+<p>Half a tooth is half of that angular step:</p>
+<div class="arithmatex">\[
+\theta_{1/2tooth} = \frac{360^\circ}{2 \cdot T_{C(pinion)}}
+\]</div>
+<p>The rack distance for one tooth is the circular pitch. For metric module gears, circular pitch is:</p>
+<div class="arithmatex">\[
+p = \pi \cdot m
+\]</div>
+<p>So with module 1, each rack tooth is:</p>
+<div class="arithmatex">\[
+p = \pi \cdot 1 = 3.142mm
+\]</div>
+<p>Half a rack tooth is:</p>
+<div class="arithmatex">\[
+p_{1/2tooth} = \frac{\pi \cdot m}{2}
+\]</div>
+<p>With module 1:</p>
+<div class="arithmatex">\[
+p_{1/2tooth} = \frac{\pi \cdot 1}{2} = 1.571mm
+\]</div>
+<p>For the 26-tooth pinion:</p>
+<div class="arithmatex">\[
+\theta_{1tooth} = \frac{360^\circ}{26} = 13.846^\circ
+\]</div>
+<div class="arithmatex">\[
+\theta_{1/2tooth} = \frac{360^\circ}{2 \cdot 26} = 6.923^\circ
+\]</div>
+<p>That means rotating the pinion by about <strong>6.9 degrees</strong> shifts the rack by <strong>half a tooth</strong>, or <strong>1.571mm</strong>. Rotating the pinion by about <strong>13.85 degrees</strong> shifts the rack by <strong>one full tooth</strong>, or <strong>3.142mm</strong> for.</p>
+<h4 id="fusion-parameter-formula-list">Fusion Parameter Formula List<a class="headerlink" href="#fusion-parameter-formula-list" title="Permanent link">&para;</a></h4>
+<p>Use these as user parameters when setting up the rack and pinion in Fusion:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Unit</th>
+<th>Fusion expression</th>
+<th>Result with 26 teeth, module 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Pinion_Tooth_Count</code></td>
+<td>none</td>
+<td><code>26</code></td>
+<td><code>26</code></td>
+</tr>
+<tr>
+<td><code>module</code></td>
+<td>mm</td>
+<td><code>1 mm</code></td>
+<td><code>1.00 mm</code></td>
+</tr>
+<tr>
+<td><code>one_tooth_rotation</code></td>
+<td>deg</td>
+<td><code>(360 / Pinion_Tooth_Count) * 1 deg</code></td>
+<td><code>13.846 deg</code></td>
+</tr>
+<tr>
+<td><code>half_tooth_rotation</code></td>
+<td>deg</td>
+<td><code>(360 / Pinion_Tooth_Count / 2) * 1 deg</code></td>
+<td><code>6.923 deg</code></td>
+</tr>
+<tr>
+<td><code>one_tooth_distance</code></td>
+<td>mm</td>
+<td><code>PI * module</code></td>
+<td><code>3.142 mm</code></td>
+</tr>
+<tr>
+<td><code>half_tooth_distance</code></td>
+<td>mm</td>
+<td><code>PI * module / 2</code></td>
+<td><code>1.571 mm</code></td>
+</tr>
+</tbody>
+</table>
+<p>If you want to calculate rack travel from any pinion rotation in Fusion, use the same rolling-circumference relationship as <strong>Formula 7</strong>:</p>
+<div class="arithmatex">\[
+R_L = T_{C(pinion)} \cdot \pi \cdot m \cdot \frac{\theta}{360}
+\]</div>
+<p>For a parameterized Fusion expression, that is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Pinion_Tooth_Count * PI * module * (pinion_rotation / 360 deg)
+</span></code></pre></div>
+<p>For a half-tooth check using <code>half_tooth_rotation</code>, this becomes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Pinion_Tooth_Count * PI * module * (half_tooth_rotation / 360 deg)
+</span></code></pre></div>
+<p>With the 26-tooth module 1 pinion, that returns <strong>1.571mm</strong>, which is the <strong>half-tooth distance</strong>. For a true one-tooth distance, use <code>one_tooth_rotation</code> or the simpler <code>PI * module</code>.</p>
+<h4 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Formula 1</strong> gives the pitch diameter relationship: <span class="arithmatex">\(P_D = T_C \cdot m\)</span>.</li>
+<li><strong>Formula 4</strong> gives full pitch circumference / rack length from tooth count: <span class="arithmatex">\(R_L = T_C \cdot \pi \cdot m\)</span>.</li>
+<li><strong>Formula 7</strong> gives rack travel from partial pinion rotation: <span class="arithmatex">\(R_L = T_C \cdot \pi \cdot m \cdot \frac{\theta}{360}\)</span>.</li>
+<li>Metric gear circular pitch is the tooth-to-tooth distance along the pitch circle: <span class="arithmatex">\(p = \pi \cdot m\)</span>. On a matching rack, that same pitch becomes the linear distance from one rack tooth to the next.</li>
+</ul>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Servo travel available: <span class="arithmatex">\(100^\circ\)</span></li>
@@ -971,7 +1151,7 @@ R_L = 26 \cdot \pi \cdot \frac{100^\circ}{360^\circ} = 22.69mm
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="./.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Get started">
+          <a href="./.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome!">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -981,20 +1161,20 @@ R_L = 26 \cdot \pi \cdot \frac{100^\circ}{360^\circ} = 22.69mm
                 Previous
               </span>
               <div class="md-ellipsis">
-                Get started
+                Welcome!
               </div>
             </div>
           </a>
         
         
           
-          <a href="../markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: Markdown in 5min">
+          <a href="../markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: Helpful tips">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Markdown in 5min
+                Helpful tips
               </div>
             </div>
             <div class="md-footer__button md-icon">

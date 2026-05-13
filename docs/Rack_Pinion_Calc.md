@@ -2,6 +2,9 @@
 
 A clean, reusable way to convert rack travel into pinion tooth count.
 
+!!! Warning "Pay Attention"
+    All the calcuations here assume that we are using a **module of 1.** Sometimes you will see the module omitted from the practical applications of the equations because it's simply one.
+
 ## The Idea
 
 Calculating the distance a rack will move is actually a lot easier than you think *(haha just kidding :)*. We can think of the rack as a regular gear. After doing the calculations on it, we can "unroll" that gear, using the circumference of the gear as the rack length.
@@ -81,7 +84,7 @@ This is **Formula 4** scaled by the fraction of a full turn. A full $360^\circ$ 
 - Module: $1$
 - Pressure angle: $20^\circ$
 - Backlash: $0.15mm$
-+
+
 ### Working
 
 20mm of travel is required for the rack. Therefore, we can use **Formula 3** to find the needed rack tooth count:
@@ -219,6 +222,96 @@ The Fusion question is simply:
 > How much rack travel happens when the **26-tooth pinion** rotates by $100^\circ$?
 
 In Fusion, set the motion link to approximately **22.69mm of rack travel per 100 degrees of pinion rotation**, not 21.99mm per 100 degrees.
+
+#### Tooth Rotation and Rack Tooth Pitch
+
+For Fusion parameters, tooth indexing comes from splitting one full pinion rotation by the number of teeth on the pinion. One complete tooth-to-tooth step is one tooth pitch around the pinion, so the angular step is:
+
+$$
+\theta_{1tooth} = \frac{360^\circ}{T_{C(pinion)}}
+$$
+
+Half a tooth is half of that angular step:
+
+$$
+\theta_{1/2tooth} = \frac{360^\circ}{2 \cdot T_{C(pinion)}}
+$$
+
+The rack distance for one tooth is the circular pitch. For metric module gears, circular pitch is:
+
+$$
+p = \pi \cdot m
+$$
+
+So with module 1, each rack tooth is:
+
+$$
+p = \pi \cdot 1 = 3.142mm
+$$
+
+Half a rack tooth is:
+
+$$
+p_{1/2tooth} = \frac{\pi \cdot m}{2}
+$$
+
+With module 1:
+
+$$
+p_{1/2tooth} = \frac{\pi \cdot 1}{2} = 1.571mm
+$$
+
+For the 26-tooth pinion:
+
+$$
+\theta_{1tooth} = \frac{360^\circ}{26} = 13.846^\circ
+$$
+
+$$
+\theta_{1/2tooth} = \frac{360^\circ}{2 \cdot 26} = 6.923^\circ
+$$
+
+That means rotating the pinion by about **6.9 degrees** shifts the rack by **half a tooth**, or **1.571mm**. Rotating the pinion by about **13.85 degrees** shifts the rack by **one full tooth**, or **3.142mm** for.
+
+#### Fusion Parameter Formula List
+
+Use these as user parameters when setting up the rack and pinion in Fusion:
+
+| Parameter | Unit | Fusion expression | Result with 26 teeth, module 1 |
+| --- | --- | --- | --- |
+| `Pinion_Tooth_Count` | none | `26` | `26` |
+| `module` | mm | `1 mm` | `1.00 mm` |
+| `one_tooth_rotation` | deg | `(360 / Pinion_Tooth_Count) * 1 deg` | `13.846 deg` |
+| `half_tooth_rotation` | deg | `(360 / Pinion_Tooth_Count / 2) * 1 deg` | `6.923 deg` |
+| `one_tooth_distance` | mm | `PI * module` | `3.142 mm` |
+| `half_tooth_distance` | mm | `PI * module / 2` | `1.571 mm` |
+
+If you want to calculate rack travel from any pinion rotation in Fusion, use the same rolling-circumference relationship as **Formula 7**:
+
+$$
+R_L = T_{C(pinion)} \cdot \pi \cdot m \cdot \frac{\theta}{360}
+$$
+
+For a parameterized Fusion expression, that is:
+
+```text
+Pinion_Tooth_Count * PI * module * (pinion_rotation / 360 deg)
+```
+
+For a half-tooth check using `half_tooth_rotation`, this becomes:
+
+```text
+Pinion_Tooth_Count * PI * module * (half_tooth_rotation / 360 deg)
+```
+
+With the 26-tooth module 1 pinion, that returns **1.571mm**, which is the **half-tooth distance**. For a true one-tooth distance, use `one_tooth_rotation` or the simpler `PI * module`.
+
+#### References
+
+- **Formula 1** gives the pitch diameter relationship: $P_D = T_C \cdot m$.
+- **Formula 4** gives full pitch circumference / rack length from tooth count: $R_L = T_C \cdot \pi \cdot m$.
+- **Formula 7** gives rack travel from partial pinion rotation: $R_L = T_C \cdot \pi \cdot m \cdot \frac{\theta}{360}$.
+- Metric gear circular pitch is the tooth-to-tooth distance along the pitch circle: $p = \pi \cdot m$. On a matching rack, that same pitch becomes the linear distance from one rack tooth to the next.
 
 
 
