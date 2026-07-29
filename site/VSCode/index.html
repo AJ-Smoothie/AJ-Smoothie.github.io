@@ -899,13 +899,14 @@
 <h1 id="vs-code-clangd-setup">VS Code Clangd Setup<a class="headerlink" href="#vs-code-clangd-setup" title="Permanent link">&para;</a></h1>
 <p>Fucking finally! A process that is repeatable to setup vscode with clangd!</p>
 <ol>
-<li>Install GCC via MSYS2</li>
-<li>Use it with VScode to get it working. You'll need to add it to path: <code>C:\msys64\ucrt64\bin</code></li>
+<li>Install GCC via MSYS2. You'll need to add it to path: <code>C:\msys64\ucrt64\bin</code></li>
+<li>It's pretty much works out of the box with VScode. You'll just need to click on the <code>Run</code> button and select the <code>G++</code> compiler option</li>
 <li>Install the <strong>Clangd</strong> extension fully. Let it disable intellisense</li>
 <li>Navigate to <code>C:\Users\&lt;username_here&gt;\AppData\Local</code> and create a folder <code>clangd</code> and cd into it</li>
 <li>Inside create a file called <code>config.yaml</code> and pop in the following contents:
-    <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="nt">Compiler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:/mysys64/ucrt64/bin/g++.exe</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">Add </span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-std=c++23</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-Wall</span><span class="p p-Indicator">]</span>
+    <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">CompileFlags</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">Compiler</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C:/msys64/ucrt64/bin/g++.exe</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">Add</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-std=c++23</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-Wall</span><span class="p p-Indicator">]</span>
 </span></code></pre></div></li>
 <li>Restart language server and voila!!! Hells yeah!</li>
 </ol>

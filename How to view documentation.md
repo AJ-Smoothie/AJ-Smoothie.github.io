@@ -30,11 +30,9 @@ Open the `site` folder. Each page on the site will have its own folder, i.e. "Ra
 ### 4 - Run with Zensical
 This isn't nearly as hard as you'd think. 
 
-1. Navigate to `C:\Users\ajrob\OneDrive - LMP srl\LMP Chatt - Chatt Files\Employee Files\AJ\Learning\Smoothie_Sites\Project_Documentation`
-2. RMC and select "Open in Terminal"
-3. Bash `.venv\Scripts\activate`
-4. Bash `zensical serve`
-5. Click on the link given `http://localhost:8000`
+1. Open the directory and RMC -> Open in Terminal
+2. Bash `zensical serve`
+3. Click on the link given `http://localhost:8000`
 
 The webpage is now live. Any changes you make to the file will be updated in real time. 
 
@@ -47,27 +45,6 @@ If the webpage crashes due to some error, sometimes Zensical fail in the termina
 
 The `Serve_Website.bat` is simply running the steps above. In this same folder is a dot bat guide that explains how it works. 
 
-# How to install Zensical
-If `zensical` isn't recognized as a command, you can follow these instructions to fix it.
-
-1. Navigate to your poject `C:\Users\ajrob\OneDrive - LMP srl\LMP Chatt - Chatt Files\Employee Files\AJ\Learning\Smoothie_Sites\Project_Documentation`
-2. If `zensical` isn't recognized as a command, delete the `.venv` folder
-3. RMC -> "Open in Terminal"
-4. Create a `.venv` with python. Bash `python -m venv .venv`
-5. Activate the virtual environment `.venv\Scripts\activate`
-6. Install Zensical `python -m pip install zensical`
-
-
-## Quick Aside about .venv/Python:
-`.venv` is a self-contained Python environment for this specific project.
-
-It contains:
-
-* its own Python executable
-* its own installed Python packages
-* its own configuration
-
-This keeps project dependencies isolated so different projects do not interfere with each other. The `.venv` folder is automatically created with `python -m venv .venv` and activated with `.venv\Scripts\activate`. Once activated, all Python commands and package installs apply only to this project.
 
 
 
