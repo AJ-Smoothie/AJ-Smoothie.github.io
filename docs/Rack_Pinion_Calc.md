@@ -1,4 +1,8 @@
-# Rack & Pinion Calculator
+---
+icon: fontawesome/solid/gears
+---
+
+# Rack & Pinion Calcs
 
 A clean, reusable way to convert rack travel into pinion tooth count.
 
@@ -178,7 +182,7 @@ The thing that determines how far the rack moves is the pinion pitch diameter, w
 
 > You can think of this just like a tire rolling on the ground. It's literally the exact same concept!
 
-So do not think of the rack as getting "$3.71x more revolutions" than the pinion. The rack does not revolve at all. It just slides. The final rack travel is literally determined by how much the pinion rotates.
+So do not think of the rack as getting "3.71x more revolutions" than the pinion. The rack does not revolve at all. It just slides. The final rack travel is literally determined by how much the pinion rotates.
 
 The $21.99mm$ value came from the rounded 7-tooth rack equivalent over a full $360^\circ$ turn:
 

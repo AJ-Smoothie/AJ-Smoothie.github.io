@@ -1,4 +1,8 @@
-# Helpful tips
+---
+icon: lucide/drafting-compass
+---
+
+# Markdown tips
 
 For full documentation visit [zensical.org](https://zensical.org/docs/).
 
@@ -22,18 +26,40 @@ For full documentation visit [zensical.org](https://zensical.org/docs/).
 
     This is a **note** admonition. Use it to provide helpful information.
 
+```
+!!! note
+
+    This is a **note** admonition. Use it to provide helpful information.
+```
+
+
 !!! warning
 
     This is a **warning** admonition. Be careful!
+
+```
+!!! warning
+
+    This is a **warning** admonition. Be careful!
+```
 
 ### Details
 
 > Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
 
+`> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)`
+
 ??? info "Click to expand for more info"
 
     This content is hidden until you click to expand it.
     Great for FAQs or long explanations.
+
+```
+??? info "Click to expand for more info"
+
+    This content is hidden until you click to expand it.
+    Great for FAQs or long explanations.
+```
 
 ## Code Blocks
 
@@ -91,6 +117,46 @@ Hover it, to see a tooltip.
 
 [^1]: This is the footnote.
 
+## Images
+
+Use regular Markdown when you want the image to appear directly in the page:
+
+``` md
+![Berry Blast smoothie](ASA/images/Picture1.png)
+```
+
+You can also add hover text after the path:
+
+``` md
+![Berry Blast smoothie](ASA/images/Picture1.png "Berry Blast smoothie")
+```
+
+Use a reference-style image when you want to keep the image path separate from the paragraph:
+
+``` md
+![Berry Blast smoothie][berry-blast]
+
+[berry-blast]: ASA/images/Picture1.png "Berry Blast smoothie"
+```
+
+To size an image, use HTML instead of Markdown:
+
+``` html
+<img src="ASA/images/Picture1.png" alt="Berry Blast smoothie" width="400">
+```
+
+You can also size by percentage:
+
+``` html
+<img src="ASA/images/Picture1.png" alt="Berry Blast smoothie" width="60%">
+```
+
+Use inline HTML when you want an image to sit inside a sentence:
+
+``` html
+Blend until smooth <img src="ASA/images/Picture1.png" alt="Berry Blast smoothie" width="80"> and serve cold.
+```
+
 
 ## Formatting
 
@@ -113,6 +179,24 @@ Hover it, to see a tooltip.
 * :memo: `:memo:`
 * :eyes: `:eyes:`
 
+#### Font Awesome
+To use fontawesome, you must use the `solid` folder. So the prefix is: `fontawesome-solid`
+
+- :fontawesome-solid-mosquito-net: `:fontawesome-solid-mosquito-net:`
+- :fontawesome-solid-calculator: `:fontawesome-solid-calculator:`
+
+#### Luicide, Material Icons
+- :lucide-aperture: `:lucide-aperture:`
+- :material-bluetooth-connect: `:material-bluetooth-connect:`
+
+#### Icon header:
+If you want an icon to show up in the navigation page, put this at the top of your page:
+```
+---
+icon: lucide/cpu
+---
+```
+
 ## Maths
 
 > Go to [documentation](https://zensical.org/docs/authoring/math/)
@@ -120,6 +204,8 @@ Hover it, to see a tooltip.
 $$
 \cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
 $$
+
+`\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}`
 
 !!! warning "Needs configuration"
     Note that MathJax is included via a `script` tag on this page and is not
@@ -155,10 +241,21 @@ $$
 
 > Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
 
+I've also added a button that clears all the checks!
+
+<div class="tasklist-clear-anchor"></div>
 * [x] Install Zensical
 * [x] Configure `zensical.toml`
 * [x] Write amazing documentation
 * [ ] Deploy anywhere
+
+```
+<div class="tasklist-clear-anchor"></div>
+* [x] Install Zensical
+* [x] Configure `zensical.toml`
+* [x] Write amazing documentation
+* [ ] Deploy anywhere
+```
 
 ## Tooltips
 
@@ -203,6 +300,27 @@ icon: simple/markdown
 [Link with title](https://example.com "Hover title")
 ![Alt text](image.jpg)
 ![Image with title](image.jpg "Image title")
+```
+
+## Image examples
+
+```
+Inline image:
+![Alt text](images/example.png)
+
+Reference-style image:
+![Alt text][example-image]
+
+[example-image]: images/example.png "Optional hover title"
+
+Scaled image:
+<img src="images/example.png" alt="Alt text" width="400">
+
+Scaled by percentage:
+<img src="images/example.png" alt="Alt text" width="60%">
+
+Small image inside a sentence:
+Text before <img src="images/example.png" alt="Alt text" width="80"> text after.
 ```
 
 ## Lists
