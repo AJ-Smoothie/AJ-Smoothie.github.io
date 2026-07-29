@@ -1,0 +1,37 @@
+/* Checked items: muted text, no strikethrough */
+.md-typeset .task-list-item:has(.task-list-control input[type="checkbox"]:checked) {
+  text-decoration: none;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .task-list-item:has(.task-list-control input[type="checkbox"]:checked) :not(.task-list-control):not(.task-list-indicator) {
+  text-decoration: none !important;
+  color: var(--md-default-fg-color--light);
+}
+
+.tasklist-clear-anchor {
+  display: none;
+}
+
+.tasklist-clear-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.tasklist-clear-btn {
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.35em 0.85em;
+  border: 2px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+
+.tasklist-clear-btn:hover {
+  color: var(--md-default-fg-color);
+  border-color: var(--md-default-fg-color--light);
+}
